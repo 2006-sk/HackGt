@@ -1,3 +1,8 @@
 .env
 .env
 .env
+node_modules
+.next
+dist
+.env
+.env.local
