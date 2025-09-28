@@ -1,0 +1,137 @@
+import tailwindcssAnimate from "tailwindcss-animate";
+
+/** @type {import('tailwindcss').Config} */
+export default {
+  darkMode: ["class"],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ["Lora", "serif"],
+        serif: ["Lora", "serif"],
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
+      colors: {
+        // Your custom color palette
+        beige: {
+          50: "#FDFCF9",
+          100: "#F9F7F2",
+          200: "#F2EFE6",
+          300: "#EFEBE0",
+          400: "#E8E3D6",
+          500: "#E0DAC9",
+          600: "#D8D1BC",
+          700: "#D0C8AF",
+          800: "#C8BFA2",
+          900: "#C0B695",
+        },
+        "warm-gray": {
+          50: "#F8F7F5",
+          100: "#F0EFEB",
+          200: "#E5E3DD",
+          300: "#CFCBC4",
+          400: "#B9B4AB",
+          500: "#A39D92",
+          600: "#8D8679",
+          700: "#776F60",
+          800: "#615847",
+          900: "#4B412E",
+        },
+        charcoal: {
+          50: "#F5F5F5",
+          100: "#E5E5E5",
+          200: "#CCCCCC",
+          300: "#B3B3B3",
+          400: "#999999",
+          500: "#808080",
+          600: "#666666",
+          700: "#5C5C5C",
+          800: "#4D4D4D",
+          900: "#2C2C2C",
+        },
+        orange: {
+          50: "#FEF7F0",
+          100: "#FEEFE1",
+          200: "#FDDFC3",
+          300: "#FCCFA5",
+          400: "#FBBF87",
+          500: "#F26B2A",
+          600: "#D85A1F",
+          700: "#BE4914",
+          800: "#A43809",
+          900: "#8A2700",
+        },
+        blue: {
+          50: "#F0F4FC",
+          100: "#E1E9F9",
+          200: "#C3D3F3",
+          300: "#A5BDED",
+          400: "#87A7E7",
+          500: "#4A78C2",
+          600: "#3E66A8",
+          700: "#32548E",
+          800: "#264274",
+          900: "#1A305A",
+        },
+        purple: {
+          50: "#F8F0F8",
+          100: "#F1E1F1",
+          200: "#E3C3E3",
+          300: "#D5A5D5",
+          400: "#C787C7",
+          500: "#A864A8",
+          600: "#965696",
+          700: "#844884",
+          800: "#723A72",
+          900: "#602C60",
+        },
+        // Semantic colors using your palette
+        background: "var(--background)",
+        foreground: "var(--foreground)",
+        card: {
+          DEFAULT: "var(--card)",
+          foreground: "var(--card-foreground)",
+        },
+        popover: {
+          DEFAULT: "var(--popover)",
+          foreground: "var(--popover-foreground)",
+        },
+        primary: {
+          DEFAULT: "var(--primary)",
+          foreground: "var(--primary-foreground)",
+        },
+        secondary: {
+          DEFAULT: "var(--secondary)",
+          foreground: "var(--secondary-foreground)",
+        },
+        muted: {
+          DEFAULT: "var(--muted)",
+          foreground: "var(--muted-foreground)",
+        },
+        accent: {
+          DEFAULT: "var(--accent)",
+          foreground: "var(--accent-foreground)",
+        },
+        destructive: {
+          DEFAULT: "var(--destructive)",
+          foreground: "var(--destructive-foreground)",
+        },
+        border: "var(--border)",
+        input: "var(--input)",
+        ring: "var(--ring)",
+        chart: {
+          1: "var(--chart-1)",
+          2: "var(--chart-2)",
+          3: "var(--chart-3)",
+          4: "var(--chart-4)",
+          5: "var(--chart-5)",
+        },
+      },
+    },
+  },
+  plugins: [tailwindcssAnimate],
+};

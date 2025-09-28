@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Reset margins and padding */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+@layer base {
+  :root {
+    /* Your custom color palette */
+    --background: #efebe0; /* Light beige */
+    --foreground: #2c2c2c; /* Charcoal black */
+    --card: #fdfcf9; /* Lightest beige */
+    --card-foreground: #2c2c2c; /* Charcoal black */
+    --popover: #fdfcf9; /* Lightest beige */
+    --popover-foreground: #2c2c2c; /* Charcoal black */
+    --primary: #f26b2a; /* Orange */
+    --primary-foreground: #fdfcf9; /* Lightest beige */
+    --secondary: #cfcbc4; /* Light grey */
+    --secondary-foreground: #2c2c2c; /* Charcoal black */
+    --muted: #cfcbc4; /* Light grey */
+    --muted-foreground: #5c5c5c; /* Dark grey */
+    --accent: #4a78c2; /* Blue */
+    --accent-foreground: #fdfcf9; /* Lightest beige */
+    --destructive: #f26b2a; /* Orange for destructive actions */
+    --destructive-foreground: #fdfcf9; /* Lightest beige */
+    --border: #cfcbc4; /* Light grey */
+    --input: #cfcbc4; /* Light grey */
+    --ring: #4a78c2; /* Blue */
+    --chart-1: #f26b2a; /* Orange */
+    --chart-2: #4a78c2; /* Blue */
+    --chart-3: #a864a8; /* Purple */
+    --chart-4: #cfcbc4; /* Light grey */
+    --chart-5: #5c5c5c; /* Dark grey */
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* Dark mode using your palette */
+    --background: #2c2c2c; /* Charcoal black */
+    --foreground: #efebe0; /* Light beige */
+    --card: #4d4d4d; /* Darker charcoal */
+    --card-foreground: #efebe0; /* Light beige */
+    --popover: #4d4d4d; /* Darker charcoal */
+    --popover-foreground: #efebe0; /* Light beige */
+    --primary: #f26b2a; /* Orange */
+    --primary-foreground: #2c2c2c; /* Charcoal black */
+    --secondary: #5c5c5c; /* Dark grey */
+    --secondary-foreground: #efebe0; /* Light beige */
+    --muted: #5c5c5c; /* Dark grey */
+    --muted-foreground: #cfcbc4; /* Light grey */
+    --accent: #4a78c2; /* Blue */
+    --accent-foreground: #efebe0; /* Light beige */
+    --destructive: #f26b2a; /* Orange */
+    --destructive-foreground: #2c2c2c; /* Charcoal black */
+    --border: #5c5c5c; /* Dark grey */
+    --input: #5c5c5c; /* Dark grey */
+    --ring: #4a78c2; /* Blue */
+    --chart-1: #f26b2a; /* Orange */
+    --chart-2: #4a78c2; /* Blue */
+    --chart-3: #a864a8; /* Purple */
+    --chart-4: #cfcbc4; /* Light grey */
+    --chart-5: #5c5c5c; /* Dark grey */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom font and base styles */
+:root {
+  font-family: "Lora", serif;
+  line-height: 1.6;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Page Gradient Background */
+@keyframes gradient-rotate {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.page-gradient-bg {
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #f8fafc 15%,
+    #f3e8ff 30%,
+    #e9d5ff 50%,
+    #f3e8ff 70%,
+    #f8fafc 85%,
+    #ffffff 100%
+  );
+  background-size: 100% 100%;
+}
+
+/* Custom animations */
+@keyframes scroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 20s linear infinite;
+  will-change: transform;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
